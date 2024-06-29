@@ -1,0 +1,518 @@
+* {
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Damion);
+@media only screen and (max-width: 600px) {
+
+body {
+    font-family: 'Damion', cursive;
+    background: rgba(218, 180, 180, 1) 100% ;
+    background: -moz-radial-gradient(center, ellipse cover, rgb(255, 255, 255) 0%, rgba(218, 180, 180, 1) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(251, 239, 236, 1) 0%, rgba(218, 180, 180, 1) 100%);
+    background: radial-gradient(ellipse at center, rgba(218, 180, 180, 1) 100%, rgba(218, 180, 180, 1) 100%);
+    height: 100vh;
+    overflow: hidden;
+    transform: scale(1); 
+        transform-origin: top left  bottom;
+        overflow: hidden; 
+    position: relative;
+    left: -55px;
+        
+}
+}
+.birthday .add {
+    margin-top: 40px;
+    clear: both;
+    font-family: 'Damion', cursive;
+    background: transparent;
+    border: 2px solid #e77572;
+    color: #e77572;
+    font-size: 22px;
+    padding: 14px 28px;
+    border-radius: 40px;
+    transition: all .23s;
+    outline: none;
+    cursor: pointer;
+}
+
+.birthday .add:hover {
+    background: #e77572;
+    color: white;
+}
+
+.birthday_inner__modal {
+    width: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: all .4s;
+    margin: auto;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    background: white;
+    border-radius: 20px;
+    z-index: 2;
+    padding: 40px;
+    box-shadow: 0px 3px 10px 0px #E5B4B2;
+}
+
+.birthday_inner__modal .modal_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-60%);
+}
+
+.birthday_inner__modal .modal_image img {
+    width: 100px;
+}
+
+.birthday_inner__modal h1 {
+    color: #e77572;
+    margin: 0;
+}
+
+.birthday_inner__modal p {
+    font-family: 'georgia';
+    font-size: 13px;
+    color: #b9918e;
+}
+
+.birthday_inner__modal button {
+    background: #e77572;
+    color: white;
+    outline: none;
+    padding: 20px;
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Damion', cursive;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all .2s;
+    cursor: pointer;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.birthday_inner__modal button:hover {
+    background: #d36764;
+}
+
+.birthday_inner__stage.stage1 {
+    display: block;
+}
+
+.birthday_inner__stage {
+    width: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    top: 50%;
+    display: none;
+    transform: translateY(-50%);
+}
+
+.birthday_inner__stage h1 {
+    color: #e77572;
+    margin: 0;
+}
+
+.birthday_inner__stage h2 {
+    font-family: 'georgia';
+    font-size: 12px;
+    color: #b9918e;
+    line-height: 18px;
+    margin: 0;
+}
+
+.birthday_inner__stage .mix {
+    margin: 80px 0 10px;
+    position: relative;
+}
+
+.birthday_inner__stage .mix .mix_spoon {
+    position: absolute;
+    top: -37px;
+    left: 200px;
+    transform: rotate(0deg) translateX(15px) translateY(3px) rotate(0deg) scale(1);
+}
+
+.birthday_inner__stage img.intro {
+    width: 300px;
+    transform: scale(0);
+    animation: bounce .6s forwards 1s, moveup .6s forwards 2s;
+    position: relative;
+    top: 0;
+}
+
+.birthday_inner__stage .oven img {
+    width: 290px;
+    position: relative;
+    left: -10px;
+}
+
+.birthday_inner__stage .tin img {
+    width: 90px;
+}
+
+.birthday_inner__stage .candle {
+    position: relative;
+    opacity: 0;
+    animation: candle 1s forwards 1.3s;
+    top: 10px;
+}
+
+.birthday_inner__stage .startagain {
+    position: absolute;
+    right: 0;
+    top: 350px;
+    font-size: 24px;
+    color: #e77572;
+}
+
+.birthday_inner__stage .cakemake {
+    margin-top: 230px;
+    clear: both;
+    text-align: center;
+}
+
+.birthday_inner__stage .cakemake .base,
+.birthday_inner__stage .cakemake .sponge {
+    height: 40px;
+    margin: 0 auto;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-bottom: -10px;
+    position: relative;
+    background-image: -webkit-repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(255, 255, 255, .2) 5px, rgba(255, 255, 255, .2) 10px);
+}
+
+.birthday_inner__stage .cakemake .base div,
+.birthday_inner__stage .cakemake .sponge div {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: Red;
+    border-radius: 100px;
+    top: -5px;
+    z-index: 4;
+}
+
+.birthday_inner__stage .cakemake .base div:nth-of-type(1) {
+    left: 0;
+    margin-left: 6px;
+}
+
+.birthday_inner__stage .cakemake .base div:nth-of-type(2) {
+    left: 20%;
+    margin-left: 6px;
+}
+
+.birthday_inner__stage .cakemake .base div:nth-of-type(3) {
+    left: 40%;
+    margin-left: 6px;
+}
+
+.birthday_inner__stage .cakemake .base div:nth-of-type(4) {
+    left: 60%;
+    margin-left: 6px;
+}
+
+.birthday_inner__stage .cakemake .base div:nth-of-type(5) {
+    left: 80%;
+    margin-left: 6px;
+}
+
+.birthday_inner__stage .cakemake .sponge .sponge-vanilla div {
+    background: #CAA068;
+}
+
+.birthday_inner__stage .cakemake .sponge .sponge-strawberry div {
+    background: #E27983;
+}
+
+.birthday_inner__stage .cakemake .sponge .sponge-fruit div {
+    background: #A9A088;
+}
+
+.birthday_inner__stage .cakemake .filling {
+    height: 10px;
+    margin: 0 auto;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-bottom: -1px;
+    position: relative;
+    z-index: 1;
+    top: 9px;
+}
+
+.birthday_inner__stage .cakemake .filling div {
+    display: block;
+    width: 12.5%;
+    float: left;
+    height: 16px;
+    background: black;
+    border-radius: 100%;
+}
+
+.birthday_inner__stage .cakemake .sponge,
+.birthday_inner__stage .cakemake .filling {
+    width: 200px;
+}
+
+.birthday_inner__stage .cakemake .sponge-vanilla {
+    background-color: #ffd296;
+}
+
+.birthday_inner__stage .cakemake .sponge-strawberry {
+    background-color: #ff99a3;
+}
+
+.birthday_inner__stage .cakemake .sponge-fruit {
+    background-color: #d5ccb2;
+}
+
+.birthday_inner__stage .cakemake .filling-jam {
+    background: #e75656;
+}
+
+.birthday_inner__stage .cakemake .filling-cream {
+    background: #fff;
+}
+
+.birthday_inner__stage .cakemake .filling-choc {
+    background: #9f3d28;
+}
+
+.birthday_inner__stage .cakemake .filling-lemon {
+    background: #e8e086;
+}
+
+.birthday_inner__stage .options {
+    position: relative;
+    left: 12px;
+}
+
+.birthday_inner__stage .options .sponges,
+.birthday_inner__stage .options .fillings {
+    float: left;
+    position: relative;
+}
+
+.birthday_inner__stage .options .sponges h3,
+.birthday_inner__stage .options .fillings h3 {
+    text-align: left;
+    color: #a25a58;
+    font-size: 20px;
+}
+
+.birthday_inner__stage .options .sponges h5,
+.birthday_inner__stage .options .fillings h5 {
+    float: right;
+    margin: 0;
+    color: #e77572;
+    position: absolute;
+    top: 20px;
+    right: 14px;
+    font-size: 20px;
+}
+
+.birthday_inner__stage .options .sponges .item,
+.birthday_inner__stage .options .fillings .item {
+    float: left;
+    margin-right: 14px;
+}
+
+.birthday_inner__stage .options .sponges .item .vanilla,
+.birthday_inner__stage .options .fillings .item .vanilla {
+    background: #ffd296;
+}
+
+.birthday_inner__stage .options .sponges .item .strawberry,
+.birthday_inner__stage .options .fillings .item .strawberry {
+    background: #ff99a3;
+}
+
+.birthday_inner__stage .options .sponges .item .fruit,
+.birthday_inner__stage .options .fillings .item .fruit {
+    background: #d5ccb2;
+}
+
+.birthday_inner__stage .options .sponges .item .jam,
+.birthday_inner__stage .options .fillings .item .jam {
+    background: #e75656;
+}
+
+.birthday_inner__stage .options .sponges .item .cream,
+.birthday_inner__stage .options .fillings .item .cream {
+    background: #fff;
+}
+
+.birthday_inner__stage .options .sponges .item .choc,
+.birthday_inner__stage .options .fillings .item .choc {
+    background: #9f3d28;
+}
+
+.birthday_inner__stage .options .sponges .item .lemon,
+.birthday_inner__stage .options .fillings .item .lemon {
+    background: #e8e086;
+}
+
+.birthday_inner__stage .options .sponges .item h4,
+.birthday_inner__stage .options .fillings .item h4 {
+    margin: 0;
+    color: #e77572;
+}
+
+.birthday_inner__stage .options .inactive {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.birthday_inner__stage button {
+    clear: both;
+    font-family: 'Damion', cursive;
+    background: transparent;
+    border: 2px solid #e77572;
+    color: #e77572;
+    font-size: 22px;
+    padding: 14px 28px;
+    border-radius: 40px;
+    transition: all .23s;
+    outline: none;
+    cursor: pointer;
+}
+
+.birthday_inner__stage button:hover {
+    background: #e77572;
+    color: white;
+}
+
+.birthday_inner__stage .start {
+    margin-top: 30px;
+    animation: in .8s forwards 2.9s;
+    position: relative;
+    top: -20px;
+    opacity: 0;
+}
+
+.sa {
+    margin-top: 70px;
+    display: none;
+}
+
+.svg {
+    margin-bottom: 40px;
+}
+
+svg {
+    width: 390px;
+    height: 90px;
+    margin-bottom: -20px;
+    display: none;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(0);
+    }
+
+    25% {
+        transform: scale(1.06);
+    }
+
+    50% {
+        transform: scale(.965);
+    }
+
+    75% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes moveup {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: -30px;
+    }
+}
+
+@keyframes mix {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(28px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes candle {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.text path {
+    animation: dash_loader 4s 2s forwards;
+}
+
+@keyframes dash_loader {
+    to {
+        stroke-dasharray: 920;
+    }
+}
+
+path,
+polyline,
+line {
+    stroke-dasharray: 718;
+    stroke-dashoffset: 750;
+    stroke-width: 1px;
+    stroke-miterlimit: 40;
+    stroke-linejoin: round;
+    fill: none;
+    stroke: #e77572;
+    z-index: 1;
+    opacity: 1;
+}
+.intro_cake{
+    transform: scale(1.2);
+    position: relative;
+    right: 11px;
+}
